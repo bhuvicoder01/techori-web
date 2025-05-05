@@ -31,8 +31,6 @@ const About = () => {
 
   return (
     <Layout>
-      {/* नेवबार जोड़ें */}
-      <Navbar />
 
       {/* हीरो सेक्शन (डुप्लिकेट हटाया गया) */}
       <section className="relative py-24 bg-gradient-to-r from-techori-orange/10 to-techori-red/10 overflow-hidden">
