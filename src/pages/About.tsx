@@ -14,13 +14,67 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 techori-gradient-text">About TECHORI</h1>
             <p className="text-xl text-gray-700 mb-8">
-              Pioneering digital transformation with innovative IT solutions since 2018
+              Pioneering digital transformation with innovative IT solutions since 2019
             </p>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-16 bg-white" style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%, 0% 100%)" }}></div>
       </section>
-
+<div className="min-h-screen flex flex-col">
+      <Navbar />
+      
+      <main className="flex-grow pt-20">
+        {/* Hero Section */}
+        <section className="py-12 md:py-16 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col md:flex-row items-center gap-10">
+                <div className="md:w-1/2">
+                  <div className="inline-block bg-brand-50 px-3 py-1 rounded-full text-brand-700 font-medium text-sm mb-4">
+                    About Us
+                  </div>
+                  <h1 className="text-3xl md:text-5xl font-bold font-display text-gray-900 mb-4">
+                   At TECHORI, we believe that technology should empower every business — from startups to enterprises — to innovate, grow, and thrive without limits.
+                  </h1>
+                  <p className="text-xl text-gray-600 mb-6">
+                    At TECHORI, we believe that technology should empower every business — from startups to enterprises — to innovate, grow, and thrive without limits.
+                  </p>
+                  <Link to="/apply-loan">
+                    <Button size="lg" className="bg-brand-600 hover:bg-brand-700">
+                      Get Started
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+                <div className="md:w-1/2">
+                  <div className="relative aspect-square md:aspect-[4/3]">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="relative w-full h-full">
+                        <div className="absolute -top-4 -right-4 w-24 h-24 bg-brand-200 rounded-full mix-blend-multiply animate-float opacity-60"></div>
+                        <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-medicare-200 rounded-full mix-blend-multiply animate-float opacity-60" style={{ animationDelay: '2s' }}></div>
+                        
+                        <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl glassmorphism">
+                          <div className="absolute inset-0 bg-gradient-to-br from-brand-50 to-medicare-50 opacity-90"></div>
+                          <div className="absolute inset-0 flex items-center justify-center p-6">
+                            <div className="text-center">
+                              <div className="w-20 h-20 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <Heart className="h-10 w-10 text-brand-600" />
+                              </div>
+                              <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Mission</h3>
+                              <p className="text-gray-700">
+                                To bridge the gap between innovation and accessibility by delivering cutting-edge IT solutions, smart applications, and public Wi-Fi services — empowering businesses and individuals to thrive in a digitally connected world.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       {/* Mission & Vision Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -176,7 +230,7 @@ const About = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 techori-gradient-text">Meet Our Leadership Team</h2>
+            <h2 className="text-3xl font-bold mb-4 techori-gradient-text">Meet Our Directors & Management</h2>
             <p className="text-gray-700 max-w-2xl mx-auto">
               The talented professionals behind TECHORI's success
             </p>
@@ -185,14 +239,14 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: "KR Rishishwar",
-                position: "CEO & Founder",
+                name: "K.R. Rishishwar",
+                position: "Managing & visionary Director",
                 image: "aboutus/KR Rishishwar.jpg",
-                bio: "With 15+ years in the tech industry, KR leads TECHORI's vision and strategy."
+                bio: "With 5+ years in the tech industry, Mr. KR leads TECHORI's vision and strategy Of Our Company."
               },
               {
-                name: "Samantha Chen",
-                position: "CTO",
+                name: "Dinesh Kumar Sharma",
+                position: "Authorised Director Of Rishishwar Industry Private limited ",
                 image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
                 bio: "An expert in emerging technologies, Samantha drives our technical innovation."
               },
