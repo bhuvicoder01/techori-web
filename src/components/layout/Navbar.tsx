@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full bg-black hidden md:block shadow-sm sticky top-0 z-50">
+    <header className="w-full bg-black shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <div className="flex items-center">
@@ -71,10 +71,7 @@ const Navbar = () => {
               <NavItem href="/about" className="text-lg">About Us</NavItem>
               <NavItem href="/services" className="text-lg">Services</NavItem>
               <NavItem href="/portfolio" className="text-lg">Portfolio</NavItem>
-              <NavItem href="/lab" className="text-lg">Techori Lab</NavItem>
-              <NavItem href="/pricing" className="text-lg">Pricing</NavItem>
               <NavItem href="/careers" className="text-lg">Careers</NavItem>
-              <NavItem href="/blog" className="text-lg">Blog</NavItem>
               <NavItem href="/contact" className="text-lg">Contact</NavItem>
               <li className="pt-2 flex flex-col space-y-2">
                 <Button asChild variant="outline" className="border-techori-orange text-techori-orange w-full">
