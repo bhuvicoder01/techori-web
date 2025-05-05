@@ -57,10 +57,10 @@ const About = () => {
                 <div className="flex flex-col md:flex-row items-center gap-10">
                   <div className="md:w-1/2">
                     <div className="inline-block bg-brand-50 px-3 py-1 rounded-full text-brand-700 font-medium text-sm mb-4">
-                      About Us
+                      "डिजिटल भारत"
                     </div>
                     <h1 className="text-3xl md:text-5xl font-bold font-display text-gray-900 mb-4">
-                      At TECHORI, we believe that technology should empower every business — from startups to enterprises — to innovate, grow, and thrive without limits.
+                      TECHORI.
                     </h1>
                     <p className="text-xl text-gray-600 mb-6">
                       At TECHORI, we believe that technology should empower every business — from startups to enterprises — to innovate, grow, and thrive without limits.
