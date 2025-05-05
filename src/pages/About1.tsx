@@ -20,13 +20,13 @@ const About = () => {
       name: "Mr. King Raj Rishishwar",
       position: "Managing & visionary Director",
       company: "Rishishwar Industry Private Limited",
-      image: "/lovable-uploads/acb4e400-7134-428e-b9be-f26f88b44651.png",
+      image: "/aboutus/KR Rishishwar.jpg",
     },
     {
       name: "Mr. Dinesh Kumar Sharma",
       position: "Authorized Director",
       company: "Rishishwar Industry Private Limited",
-      image: "/placeholder.svg",
+      image: "/aboutus/Dk Rishishwar.jpg",
     },
   ];
 
