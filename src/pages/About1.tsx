@@ -78,9 +78,9 @@ const About = () => {
                                 <div className="w-20 h-20 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-4">
                                   <Heart className="h-10 w-10 text-orange-500" />
                                 </div>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Mission</h3>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation for All</h3>
                                 <p className="text-gray-600">
-                                  To bridge the gap between innovation and accessibility by delivering cutting-edge IT solutions, smart applications, and public Wi-Fi services — empowering businesses and individuals to thrive in a digitally connected world.
+                                 Empowering individuals and businesses through accessible innovation by delivering advanced IT solutions, smart applications, and public Wi-Fi—enabling inclusive growth in a digitally connected world..
                                 </p>
                               </div>
                             </div>
@@ -320,9 +320,9 @@ const About = () => {
                   },
                   {
                     name: "Vrindavan Viharini,",
-                    position: "Head of Social Working",
+                    position: "Guardian of Our Companies",
                     image: "aboutus/Vrindavan Viharini.jpg",
-                    bio: "Head of Social Working at Rishishwar Industry Private Limited, leads initiatives in education, healthcare, and sustainability, empowering communities and fostering positive social impact.",
+                    bio: "Guardian of Rishishwar Industry Private Limited, upholds its values, guiding sustainable growth and community welfare with visionary leadership and ethical direction..",
                   },
                   {
                     name: "Aisha Patel",
@@ -356,10 +356,10 @@ const About = () => {
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
-                  { number: "500+", label: "Projects Completed" },
-                  { number: "150+", label: "Happy Clients" },
-                  { number: "50+", label: "Team Members" },
-                  { number: "10+", label: "Countries Served" },
+                  { number: "80+", label: "Projects Completed" },
+                  { number: "50+", label: "Happy Clients" },
+                  { number: "150+", label: "Team Members" },
+                  { number: "16+", label: "Countries Served" },
                 ].map((stat, index) => (
                   <div key={index} className="p-6">
                     <p className="text-4xl md:text-5xl font-bold mb-2 text-orange-500">{stat.number}</p>
