@@ -177,7 +177,6 @@ const Navbar = () => {
           <ul className="flex space-x-8">
             <NavItem href="/" closeMenu={closeMenu}>Home</NavItem>
             <NavItem href="/about" closeMenu={closeMenu}>About Us</NavItem>
-            <NavItem href="/about1" closeMenu={closeMenu}>About Us 1</NavItem>
             <NavItem href="/services" closeMenu={closeMenu}>Services</NavItem>
             <NavItem href="/portfolio" closeMenu={closeMenu}>Portfolio</NavItem>
             <NavItem href="/careers" closeMenu={closeMenu}>Careers</NavItem>
