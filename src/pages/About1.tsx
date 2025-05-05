@@ -320,9 +320,9 @@ const About = () => {
                   },
                   {
                     name: "Vrindavan Viharini,",
-                    position: "Head of Social Working",
+                    position: "Guardian of Our Companies",
                     image: "aboutus/Vrindavan Viharini.jpg",
-                    bio: "Head of Social Working at Rishishwar Industry Private Limited, leads initiatives in education, healthcare, and sustainability, empowering communities and fostering positive social impact.",
+                    bio: "Guardian of Rishishwar Industry Private Limited, upholds its values, guiding sustainable growth and community welfare with visionary leadership and ethical direction..",
                   },
                   {
                     name: "Aisha Patel",
