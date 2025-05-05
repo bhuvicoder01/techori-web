@@ -1,3 +1,5 @@
+
+import React from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -12,7 +14,7 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 techori-gradient-text">About TECHORI</h1>
             <p className="text-xl text-gray-700 mb-8">
-              At TECHORI, we believe that technology should empower every business — from startups to enterprises — to innovate, grow, and thrive without limits.
+              Pioneering digital transformation with innovative IT solutions since 2019.
             </p>
           </div>
         </div>
@@ -37,7 +39,7 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6 techori-gradient-text">Our Mission & Vision</h2>
               <p className="text-gray-700 mb-4">
-                At TECHORI, our mission is to bridge the gap between innovation and accessibility by delivering cutting-edge IT solutions, smart applications, and public Wi-Fi services — empowering businesses and individuals to thrive in a digitally connected world.
+                At TECHORI, our mission is to empower businesses through technology, delivering innovative IT solutions that solve real-world problems and drive sustainable growth.
               </p>
               <p className="text-gray-700 mb-6">
                 We envision a future where every business, regardless of size, can harness the full potential of technology to achieve operational excellence and competitive advantage in the digital landscape.
@@ -174,7 +176,7 @@ const About = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 techori-gradient-text">Meet Our Directors & Management</h2>
+            <h2 className="text-3xl font-bold mb-4 techori-gradient-text">Meet Our Leadership Team</h2>
             <p className="text-gray-700 max-w-2xl mx-auto">
               The talented professionals behind TECHORI's success
             </p>
@@ -184,26 +186,26 @@ const About = () => {
             {[
               {
                 name: "K.R. Rishishwar",
-                position: "Managing & Visionary Director",
+                position: "Managing & visionary Director",
                 image: "aboutus/KR Rishishwar.jpg",
-                bio: "With 5+ years in the tech industry, Mr. KR leads TECHORI's vision and strategy Of Our Company."
+                bio: "With 15+ years in the tech industry, Alex leads TECHORI's vision and strategy."
               },
               {
                 name: "Dinesh Kumar Sharma",
-                position: "Authorised Director Of Rishishwar Industry Private Limited",
-                image: "https://via.placeholder.com/150",
-                bio: "An expert in emerging technologies, Dinesh drives our technical innovation."
+                position: "Authorised Director Of Rishishwar Industry Private limited",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+                bio: "An expert in emerging technologies, Samantha drives our technical innovation."
               },
               {
                 name: "Miguel Rodriguez",
                 position: "Head of Development",
-                image: "https://via.placeholder.com/150",
+                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
                 bio: "Miguel ensures all our development projects meet the highest standards."
               },
               {
                 name: "Aisha Patel",
                 position: "Lead Designer",
-                image: "https://via.placeholder.com/150",
+                image: "https://images.unsplash.com/photo-1580489944761-15a19d654956",
                 bio: "Aisha combines aesthetics and functionality to create exceptional user experiences."
               }
             ].map((member, index) => (
@@ -232,10 +234,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "80+", label: "Projects Completed" },
-              { number: "50+", label: "Happy Clients" },
-              { number: "150+", label: "Team Members" },
-              { number: "16+", label: "Countries Served" }
+              { number: "500+", label: "Projects Completed" },
+              { number: "150+", label: "Happy Clients" },
+              { number: "50+", label: "Team Members" },
+              { number: "10+", label: "Countries Served" }
             ].map((stat, index) => (
               <div key={index} className="p-6">
                 <p className="text-4xl md:text-5xl font-bold mb-2 techori-gradient-text">{stat.number}</p>
