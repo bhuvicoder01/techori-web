@@ -25,7 +25,7 @@ const About = () => {
       name: "Mr. Dinesh Kumar Sharma",
       position: "Authorized Director",
       company: "Rishishwar Industry Private Limited",
-      image: "/aboutus/IMG-20250505-WA0005.jpg",
+      image: "/aboutus/IMG-20250505-WA0005.jpg"
     },
   ];
 
@@ -321,14 +321,14 @@ const About = () => {
                   {
                     name: "Dinesh Kumar Sharma",
                     position: "Authorised Director Of Rishishwar Industry Private limited",
-                    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+                    image: "about us/IMG-20250505-WA0005.jpg",
                     bio: "An expert in emerging technologies, Samantha drives our technical innovation.",
                   },
                   {
-                    name: "Miguel Rodriguez",
-                    position: "Head of Development",
-                    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-                    bio: "Miguel ensures all our development projects meet the highest standards.",
+                    name: "Vrindavan Viharini,",
+                    position: "Head of Social Working",
+                    image: "aboutus/Vrindavan Viharini.jpg",
+                    bio: "Head of Social Working at Rishishwar Industry Private Limited, leads initiatives in education, healthcare, and sustainability, empowering communities and fostering positive social impact.",
                   },
                   {
                     name: "Aisha Patel",
