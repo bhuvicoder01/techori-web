@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -27,6 +27,8 @@ const Navbar = () => {
   const toggleButtonRef = useRef(null);
   const canvasRef = useRef(null);
   const animationFrameId = useRef(null);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     // Particle System Setup
@@ -40,8 +42,8 @@ const Navbar = () => {
       particleRenderer.setSize(window.innerWidth, particleCanvas.clientHeight);
 
       const particles = new THREE.BufferGeometry();
-      const particleCount = 1000; // Reduced for performance
-      positions = new Float32Array(particleCount * 3);
+      const particleCount = 2000;
+      positions = new Float32Array(particleCount * 5);
       velocities = new Float32Array(particleCount * 5);
 
       for (let i = 0; i < particleCount; i++) {
@@ -154,7 +156,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="w-full fixed top-0 z-50 bg-black/30 backdrop-blur-md shadow-sm">
+    <header className={`w-full fixed top-0 z-50 shadow-sm ${isHomePage ? "bg-black/30 backdrop-blur-md" : "bg-black"}`}>
       <canvas
         ref={canvasRef}
         className="absolute top-0 left-0 w-full h-full z-[-1]"
@@ -162,7 +164,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between relative">
         <Link to="/" className="flex items-center space-x-2">
           <div className="flex items-center">
-            <img src="/techori2.png" alt="Techori Logo" className="h-10 w-auto" />
+            <img
+              src='/techori2.png'
+              alt="Techori Logo"
+              className="h-10 w-auto"
+            />
           </div>
         </Link>
 
@@ -196,15 +202,13 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        
         <div
           ref={menuRef}
-          className={`md:hidden bg-black/80 backdrop-blur-md w-full absolute right-0 top-full py-2 shadow-lg ${
-            isClosing ? "slide-out-right" : "slide-in-right"
-          }`}
+          className={`md:hidden w-full absolute right-0 top-full py-4 shadow-lg ${
+            isHomePage ? "bg-black/80 backdrop-blur-md" : "bg-black"
+          } ${isClosing ? "slide-out-right" : "slide-in-right"}`}
         >
           <nav className="container mx-auto px-4">
-            
             <ul className="flex flex-col space-y-3">
               <NavItem href="/" className="text-lg" closeMenu={closeMenu}>Home</NavItem>
               <NavItem href="/about" className="text-lg" closeMenu={closeMenu}>About Us</NavItem>

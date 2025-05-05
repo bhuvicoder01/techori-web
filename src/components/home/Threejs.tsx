@@ -95,7 +95,7 @@ const TechoriAnimation = () => {
     <div className="relative w-full h-full">
       <canvas id="particle-canvas" className="absolute top-0 left-0 w-full h-full" />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-        <h1 className="text-6xl font-bold flex items-center justify-center space-x-1">
+        <h1 className="text-8xl font-bold flex items-center justify-center space-x-1">
           {"TECHORI".split("").map((char, index) => (
             <span
               key={index}
