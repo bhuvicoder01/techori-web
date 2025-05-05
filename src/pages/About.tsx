@@ -188,13 +188,13 @@ const About = () => {
                 name: "K.R. Rishishwar",
                 position: "Managing & visionary Director",
                 image: "aboutus/KR Rishishwar.jpg",
-                bio: "With 15+ years in the tech industry, Alex leads TECHORI's vision and strategy."
+                bio: "With 5+ years in the tech & Management industry, Mr. KR leads Techori & Rishishwar Industry Private limited 's vision and strategy Of Our Company."
               },
               {
                 name: "Dinesh Kumar Sharma",
                 position: "Authorised Director Of Rishishwar Industry Private limited",
                 image: "",
-                bio: "An expert in emerging technologies, Samantha drives our technical innovation."
+                bio: "An expert in Management & Social Service."
               },
               {
                 name: "Miguel Rodriguez",
@@ -234,10 +234,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "500+", label: "Projects Completed" },
-              { number: "150+", label: "Happy Clients" },
-              { number: "50+", label: "Team Members" },
-              { number: "10+", label: "Countries Served" }
+              { number: "80+", label: "Projects Completed" },
+              { number: "50+", label: "Happy Clients" },
+              { number: "150+", label: "Team Members" },
+              { number: "16+", label: "Countries Served" }
             ].map((stat, index) => (
               <div key={index} className="p-6">
                 <p className="text-4xl md:text-5xl font-bold mb-2 techori-gradient-text">{stat.number}</p>
