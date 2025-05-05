@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Building, Users, GraduationCap, Handshake, CheckCircle, Activity, Heart, ArrowRight } from "lucide-react";
 // नेवबार को इम्पोर्ट करें (यह मानते हुए कि यह आपके प्रोजेक्ट में मौजूद है)
-import Navbar from "@/components/layout/Navbar"; // सुनिश्चित करें कि यह पाथ सही है
 
 const About = () => {
   // लोडेड स्टेट को परिभाषित करें ताकि एनिमेशन काम करे
@@ -26,7 +25,7 @@ const About = () => {
       name: "Mr. Dinesh Kumar Sharma",
       position: "Authorized Director",
       company: "Rishishwar Industry Private Limited",
-      image: "/aboutus/Dk Rishishwar.jpg",
+      image: "/aboutus/IMG-20250505-WA0005.jpg",
     },
   ];
 
