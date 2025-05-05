@@ -354,10 +354,10 @@ const leaders = [
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "500+", label: "Projects Completed" },
-              { number: "150+", label: "Happy Clients" },
-              { number: "50+", label: "Team Members" },
-              { number: "10+", label: "Countries Served" }
+              { number: "80+", label: "Projects Completed" },
+              { number: "50+", label: "Happy Clients" },
+              { number: "150+", label: "Team Members" },
+              { number: "16+", label: "Countries Served" }
             ].map((stat, index) => (
               <div key={index} className="p-6">
                 <p className="text-4xl md:text-5xl font-bold mb-2 techori-gradient-text">{stat.number}</p>
