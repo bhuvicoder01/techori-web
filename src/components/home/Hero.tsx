@@ -40,7 +40,7 @@ const Hero = () => {
                   <div className="w-24 h-24 md:h-32">
                     <TechoriAnimation />
                   </div>
-                  <span className="text-6xl md:text-8xl font-bold techori-gradient-text">echori</span>
+                  <span className="text-6xl mr-6 md:text-8xl font-bold techori-gradient-text">echori</span>
                 </div>
               </div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-techori-orange/30 rounded-full -mt-10 -mr-10 animate-pulse"></div>

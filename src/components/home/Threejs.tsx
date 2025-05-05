@@ -11,7 +11,7 @@ const TechoriAnimation = () => {
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     
-    renderer.setSize(128, 128);
+    renderer.setSize(128, 112);
     mountRef.current.appendChild(renderer.domElement);
 
     // Load the "t" Image as a Texture
@@ -24,7 +24,7 @@ const TechoriAnimation = () => {
     sprite.scale.set(80, 80, 1); // Adjust size to fit the canvas
     scene.add(sprite);
 
-    camera.position.z = 100;
+    camera.position.z = 90;
 
     // Particle System for Background
     let particleScene, particleCamera, particleRenderer, particleSystem, positions, velocities;
