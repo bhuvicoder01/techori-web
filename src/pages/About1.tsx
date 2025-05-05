@@ -22,10 +22,10 @@ const About = () => {
       image: "/aboutus/KR Rishishwar.jpg",
     },
     {
-      name: "Mr. Dinesh Kumar Sharma",
+      name: "Mr. DInesh kumar sharma",
       position: "Authorized Director",
       company: "Rishishwar Industry Private Limited",
-      image: "/aboutus/IMG-20250505-WA0005.jpg"
+      image: "/aboutus/DInesh kumar sharma.jpg"
     },
   ];
 
@@ -317,9 +317,9 @@ const About = () => {
                     bio: "With 5+ years in the tech industry, Mr. KR leads TECHORI's vision and strategy Of Our Company.",
                   },
                   {
-                    name: "Dinesh Kumar Sharma",
+                    name: "DInesh kumar sharma",
                     position: "Authorised Director Of Rishishwar Industry Private limited",
-                    image: "about us/IMG-20250505-WA0005.jpg",
+                    image: "aboutus/DInesh kumar sharma.jpg",
                     bio: "An expert in emerging technologies, Samantha drives our technical innovation.",
                   },
                   {
