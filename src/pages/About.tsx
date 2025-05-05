@@ -1,26 +1,9 @@
-
-import React from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Building, Users, GraduationCap, Handshake, CheckCircle, Activity, Heart } from "lucide-react";
 
 const About = () => {
-const leaders = [
-    {
-      name: 'Mr. King Raj Rishishwar',
-      position: 'Managing & visionary Director',
-      company: 'Rishishwar Industry Private Limited',
-      image: '/lovable-uploads/acb4e400-7134-428e-b9be-f26f88b44651.png', // Updated to use the uploaded image
-    },
-    {
-      name: 'Mr. Dinesh Kumar Sharma',
-      position: 'Authorized Director',
-      company: 'Rishishwar Industry Private Limited',
-      image: '/placeholder.svg', // Using placeholder, replace with actual image
-    },
-  ];
-
   return (
     <Layout>
       {/* Hero Section */}
@@ -29,118 +12,13 @@ const leaders = [
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 techori-gradient-text">About TECHORI</h1>
             <p className="text-xl text-gray-700 mb-8">
-              Pioneering digital transformation with innovative IT solutions since 2019
+              At TECHORI, we believe that technology should empower every business — from startups to enterprises — to innovate, grow, and thrive without limits.
             </p>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-16 bg-white" style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%, 0% 100%)" }}></div>
       </section>
-<div className="min-h-screen flex flex-col">
-      <Navbar />
-      
-      <main className="flex-grow pt-20">
-        {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gray-50">
-          <div className="container mx-auto px-4 sm:px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row items-center gap-10">
-                <div className="md:w-1/2">
-                  <div className="inline-block bg-brand-50 px-3 py-1 rounded-full text-brand-700 font-medium text-sm mb-4">
-                    About Us
-                  </div>
-                  <h1 className="text-3xl md:text-5xl font-bold font-display text-gray-900 mb-4">
-                   At TECHORI, we believe that technology should empower every business — from startups to enterprises — to innovate, grow, and thrive without limits.
-                  </h1>
-                  <p className="text-xl text-gray-600 mb-6">
-                    At TECHORI, we believe that technology should empower every business — from startups to enterprises — to innovate, grow, and thrive without limits.
-                  </p>
-                  <Link to="/apply-loan">
-                    <Button size="lg" className="bg-brand-600 hover:bg-brand-700">
-                      Get Started
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </div>
-                <div className="md:w-1/2">
-                  <div className="relative aspect-square md:aspect-[4/3]">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="relative w-full h-full">
-                        <div className="absolute -top-4 -right-4 w-24 h-24 bg-brand-200 rounded-full mix-blend-multiply animate-float opacity-60"></div>
-                        <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-medicare-200 rounded-full mix-blend-multiply animate-float opacity-60" style={{ animationDelay: '2s' }}></div>
-                        
-                        <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl glassmorphism">
-                          <div className="absolute inset-0 bg-gradient-to-br from-brand-50 to-medicare-50 opacity-90"></div>
-                          <div className="absolute inset-0 flex items-center justify-center p-6">
-                            <div className="text-center">
-                              <div className="w-20 h-20 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
-                                <Heart className="h-10 w-10 text-brand-600" />
-                              </div>
-                              <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Mission</h3>
-                              <p className="text-gray-700">
-                                To bridge the gap between innovation and accessibility by delivering cutting-edge IT solutions, smart applications, and public Wi-Fi services — empowering businesses and individuals to thrive in a digitally connected world.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Who We Are Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4 sm:px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row gap-12 items-center">
-                <div className="md:w-1/2">
-                  <div className={`rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    <div className="aspect-[4/3] bg-gradient-to-br from-brand-500 to-medicare-500 relative">
-                      <div className="absolute inset-0 bg-black/20"></div>
-                      <div className="absolute inset-0 flex items-center justify-center p-8">
-                        <div className="text-center">
-                          <div className="glass-card mb-4 p-4 inline-block rounded-full">
-                            <Users className="h-10 w-10 text-white" />
-                          </div>
-                          <h3 className="text-2xl font-bold text-white mb-2">Who We Are</h3>
-                          <p className="text-white/90">
-                            A leading IT and digital solutions provider, empowering businesses and startups with innovative website portals, mobile applications, robotics development, and public Wi-Fi services — driving digital transformation across industries.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="md:w-1/2">
-                  <div className={`transition-all duration-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '200ms' }}>
-                    <h2 className="text-3xl font-bold font-display text-gray-900 mb-6">
-                      Our Company
-                    </h2>
-                    <p className="text-gray-700 mb-6">
-                      Techori is a visionary initiative by Rishishwar Industry Private Limited, working under its dynamic leadership. Techori empowers entrepreneurs and local businesses by offering innovative partnership models and digital earning opportunities across Bharat..
-                    </p>
-                    <div className="space-y-6">
-                      {leaders.map((leader, index) => (
-                        <div key={index} className="flex items-center gap-4">
-                          <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200">
-                            <img src={leader.image} alt={leader.name} className="w-full h-full object-cover" />
-                          </div>
-                          <div>
-                            <h4 className="text-lg font-semibold text-gray-900">{leader.name}</h4>
-                            <p className="text-gray-600 text-sm">{leader.position}</p>
-                            <p className="text-gray-500 text-sm">{leader.company}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
       {/* Mission & Vision Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -159,7 +37,7 @@ const leaders = [
             <div>
               <h2 className="text-3xl font-bold mb-6 techori-gradient-text">Our Mission & Vision</h2>
               <p className="text-gray-700 mb-4">
-                At TECHORI, our mission is to empower businesses through technology, delivering innovative IT solutions that solve real-world problems and drive sustainable growth.
+                At TECHORI, our mission is to bridge the gap between innovation and accessibility by delivering cutting-edge IT solutions, smart applications, and public Wi-Fi services — empowering businesses and individuals to thrive in a digitally connected world.
               </p>
               <p className="text-gray-700 mb-6">
                 We envision a future where every business, regardless of size, can harness the full potential of technology to achieve operational excellence and competitive advantage in the digital landscape.
@@ -306,26 +184,26 @@ const leaders = [
             {[
               {
                 name: "K.R. Rishishwar",
-                position: "Managing & visionary Director",
-                image: "aboutus/KR Rishishwar.jpg",
+                position: "Managing & Visionary Director",
+                image: "/lovable-uploads/acb4e400-7134-428e-b9be-f26f88b44651.png",
                 bio: "With 5+ years in the tech industry, Mr. KR leads TECHORI's vision and strategy Of Our Company."
               },
               {
                 name: "Dinesh Kumar Sharma",
-                position: "Authorised Director Of Rishishwar Industry Private limited ",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
-                bio: "An expert in emerging technologies, Samantha drives our technical innovation."
+                position: "Authorised Director Of Rishishwar Industry Private Limited",
+                image: "https://via.placeholder.com/150",
+                bio: "An expert in emerging technologies, Dinesh drives our technical innovation."
               },
               {
                 name: "Miguel Rodriguez",
                 position: "Head of Development",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+                image: "https://via.placeholder.com/150",
                 bio: "Miguel ensures all our development projects meet the highest standards."
               },
               {
                 name: "Aisha Patel",
                 position: "Lead Designer",
-                image: "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+                image: "https://via.placeholder.com/150",
                 bio: "Aisha combines aesthetics and functionality to create exceptional user experiences."
               }
             ].map((member, index) => (
