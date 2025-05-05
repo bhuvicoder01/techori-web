@@ -17,7 +17,7 @@ const CtaSection = () => {
             <Button asChild size="lg" className="bg-white text-techori-dark hover:bg-gray-100 px-8">
               <Link to="/contact">Get in Touch</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8">
+            <Button asChild size="lg" variant="outline" className="border-white text-black hover:bg-white/10 px-8">
               <Link to="/services">Explore Services</Link>
             </Button>
           </div>

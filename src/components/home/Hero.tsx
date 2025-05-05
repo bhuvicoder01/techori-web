@@ -28,7 +28,7 @@ const Hero = () => {
               <Button asChild size="lg" className="bg-gradient-to-r from-techori-orange to-techori-red hover:brightness-110 text-white px-8">
                 <Link to="/services">Our Services</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-techori-dark px-8">
+              <Button asChild size="lg" variant="outline" className="text-black hover:bg-white hover:bg-techori-dark px-8">
                 <Link to="/contact">Get Started</Link>
               </Button>
             </div>
