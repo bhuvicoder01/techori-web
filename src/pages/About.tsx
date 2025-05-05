@@ -185,7 +185,7 @@ const About = () => {
               {
                 name: "K.R. Rishishwar",
                 position: "Managing & Visionary Director",
-                image: "/lovable-uploads/acb4e400-7134-428e-b9be-f26f88b44651.png",
+                image: "aboutus/KR Rishishwar.jpg",
                 bio: "With 5+ years in the tech industry, Mr. KR leads TECHORI's vision and strategy Of Our Company."
               },
               {
