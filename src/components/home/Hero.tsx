@@ -6,13 +6,9 @@ import TechoriAnimation from "./Threejs";
 const Hero = () => {
   return (
     <div className="relative bg-techori-dark text-white overflow-hidden">
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage:
-            "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"80\" height=\"80\"%3E%3Cpath fill=\"%239C92AC\" fill-opacity=\"0.4\" d=\"M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z\"%3E%3C/path%3E%3C/svg%3E')",
-        }}
-      ></div>
+      <div className="absolute inset-0 z-0">
+        <canvas id="particle-canvas" className="w-full h-full"></canvas>
+      </div>
       <div className="container mx-auto px-4 py-28 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-fade-in">
@@ -41,7 +37,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-full h-80 md:h-96 bg-gradient-to-br from-techori-orange/20 to-techori-red/20 rounded-lg flex items-center justify-center relative">
                 <div className="flex items-center">
-                  <div className="w-20 h-24  md:h-32">
+                  <div className="w-24 h-24 md:h-32">
                     <TechoriAnimation />
                   </div>
                   <span className="text-6xl md:text-8xl font-bold techori-gradient-text">echori</span>
@@ -53,6 +49,30 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <style>
+        {`
+          .techori-gradient-text {
+            background: linear-gradient(90deg, #ff4500, #ff0000, #ff4500);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 5s ease-in-out infinite;
+          }
+
+          @keyframes gradientShift {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };

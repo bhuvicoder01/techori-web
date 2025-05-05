@@ -185,10 +185,10 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: "Alex Johnson",
+                name: "KR Rishishwar",
                 position: "CEO & Founder",
-                image: "https://images.unsplash.com/photo-1560250097-0b93528c311a",
-                bio: "With 15+ years in the tech industry, Alex leads TECHORI's vision and strategy."
+                image: "aboutus/KR Rishishwar.jpg",
+                bio: "With 15+ years in the tech industry, KR leads TECHORI's vision and strategy."
               },
               {
                 name: "Samantha Chen",
