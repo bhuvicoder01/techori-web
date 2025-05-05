@@ -6,6 +6,21 @@ import { Link } from "react-router-dom";
 import { Building, Users, GraduationCap, Handshake, CheckCircle, Activity, Heart } from "lucide-react";
 
 const About = () => {
+const leaders = [
+    {
+      name: 'Mr. King Raj Rishishwar',
+      position: 'Managing & visionary Director',
+      company: 'Rishishwar Industry Private Limited',
+      image: '/lovable-uploads/acb4e400-7134-428e-b9be-f26f88b44651.png', // Updated to use the uploaded image
+    },
+    {
+      name: 'Mr. Dinesh Kumar Sharma',
+      position: 'Authorized Director',
+      company: 'Rishishwar Industry Private Limited',
+      image: '/placeholder.svg', // Using placeholder, replace with actual image
+    },
+  ];
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -68,6 +83,57 @@ const About = () => {
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Who We Are Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-12 items-center">
+                <div className="md:w-1/2">
+                  <div className={`rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                    <div className="aspect-[4/3] bg-gradient-to-br from-brand-500 to-medicare-500 relative">
+                      <div className="absolute inset-0 bg-black/20"></div>
+                      <div className="absolute inset-0 flex items-center justify-center p-8">
+                        <div className="text-center">
+                          <div className="glass-card mb-4 p-4 inline-block rounded-full">
+                            <Users className="h-10 w-10 text-white" />
+                          </div>
+                          <h3 className="text-2xl font-bold text-white mb-2">Who We Are</h3>
+                          <p className="text-white/90">
+                            A leading IT and digital solutions provider, empowering businesses and startups with innovative website portals, mobile applications, robotics development, and public Wi-Fi services — driving digital transformation across industries.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="md:w-1/2">
+                  <div className={`transition-all duration-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '200ms' }}>
+                    <h2 className="text-3xl font-bold font-display text-gray-900 mb-6">
+                      Our Company
+                    </h2>
+                    <p className="text-gray-700 mb-6">
+                      Techori is a visionary initiative by Rishishwar Industry Private Limited, working under its dynamic leadership. Techori empowers entrepreneurs and local businesses by offering innovative partnership models and digital earning opportunities across Bharat..
+                    </p>
+                    <div className="space-y-6">
+                      {leaders.map((leader, index) => (
+                        <div key={index} className="flex items-center gap-4">
+                          <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200">
+                            <img src={leader.image} alt={leader.name} className="w-full h-full object-cover" />
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-semibold text-gray-900">{leader.name}</h4>
+                            <p className="text-gray-600 text-sm">{leader.position}</p>
+                            <p className="text-gray-500 text-sm">{leader.company}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
