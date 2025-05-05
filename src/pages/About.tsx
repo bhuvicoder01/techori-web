@@ -32,8 +32,8 @@ const About = () => {
                 className="rounded-lg shadow-lg w-full h-auto"
               />
               <div className="absolute -bottom-6 -left-6 bg-techori-orange text-white p-4 rounded-lg shadow-lg hidden md:block">
-                <p className="font-bold">Since 2018</p>
-                <p>500+ Projects Delivered</p>
+                <p className="font-bold">Since July 2024</p>
+                <p>80+ Projects Delivered</p>
               </div>
             </div>
             <div>
@@ -77,12 +77,12 @@ const About = () => {
             {/* Timeline Items */}
             {[
               {
-                year: "2018",
+                year: "2019",
                 title: "Our Beginning",
                 description: "TECHORI was founded with a vision to bridge the gap between complex technology and practical business solutions."
               },
               {
-                year: "2019",
+                year: "2020",
                 title: "Expanding Services",
                 description: "Expanded our service offerings to include mobile app development and public Wi-Fi solutions."
               },
