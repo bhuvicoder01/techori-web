@@ -29,16 +29,16 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-24 bg-white overflow-hidden">
+      <section className="relative py-24 bg-white overflow-hidden h-10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">About TECHORI</h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-600 mb-10">
               Pioneering digital transformation with innovative IT solutions since 2019
             </p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-white" style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%, 0% 100%)" }}></div>
+        <div className="absolute bottom-50 left-0 w-full h-16 bg-white" style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%, 0% 100%)" }}></div>
       </section>
 
       <div className="min-h-screen flex flex-col">

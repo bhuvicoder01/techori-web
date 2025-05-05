@@ -35,12 +35,12 @@ const Hero = () => {
           </div>
           <div className="md:w-1/2 animate-slide-up">
             <div className="relative">
-              <div className="w-full h-80 md:h-96 bg-gradient-to-br from-techori-orange/20 to-techori-red/20 rounded-lg flex items-center justify-center relative">
+              <div className="w-full mr-20 h-80  bg-gradient-to-br from-techori-orange/20 to-techori-red/20 rounded-lg flex items-center justify-center relative">
                 <div className="flex items-center">
-                  <div className="w-24 h-24 md:h-32">
+                  <div className="w-24 h-24 md:h-32 mr-10 ml-10">
                     <TechoriAnimation />
                   </div>
-                  <span className="text-6xl mr-6 md:text-8xl font-bold techori-gradient-text">echori</span>
+
                 </div>
               </div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-techori-orange/30 rounded-full -mt-10 -mr-10 animate-pulse"></div>
@@ -49,30 +49,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <style>
-        {`
-          .techori-gradient-text {
-            background: linear-gradient(90deg, #ff4500, #ff0000, #ff4500);
-            background-size: 200% 100%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: gradientShift 5s ease-in-out infinite;
-          }
-
-          @keyframes gradientShift {
-            0% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-            100% {
-              background-position: 0% 50%;
-            }
-          }
-        `}
-      </style>
     </div>
   );
 };

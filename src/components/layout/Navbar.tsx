@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import * as THREE from "three";
 
-const NavItem = ({ href, children, className, closeMenu }: { href: string; children: React.ReactNode; className?: string; closeMenu: () => void }) => (
+const NavItem = ({ href, children, className, closeMenu }) => (
   <li>
     <Link
       to={href}
@@ -24,6 +25,86 @@ const Navbar = () => {
   const [isClosing, setIsClosing] = useState(false);
   const menuRef = useRef(null);
   const toggleButtonRef = useRef(null);
+  const canvasRef = useRef(null);
+  const animationFrameId = useRef(null);
+
+  useEffect(() => {
+    // Particle System Setup
+    let particleScene, particleCamera, particleRenderer, particleSystem, positions, velocities;
+    const particleCanvas = canvasRef.current;
+
+    if (particleCanvas) {
+      particleScene = new THREE.Scene();
+      particleCamera = new THREE.PerspectiveCamera(10, window.innerWidth / particleCanvas.clientHeight, 0.1, 1000);
+      particleRenderer = new THREE.WebGLRenderer({ alpha: true, canvas: particleCanvas });
+      particleRenderer.setSize(window.innerWidth, particleCanvas.clientHeight);
+
+      const particles = new THREE.BufferGeometry();
+      const particleCount = 1000; // Reduced for performance
+      positions = new Float32Array(particleCount * 3);
+      velocities = new Float32Array(particleCount * 5);
+
+      for (let i = 0; i < particleCount; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 1000;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * 1000;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 1000;
+        velocities[i * 3] = (Math.random() - 0.5) * 0.5;
+        velocities[i * 3 + 1] = (Math.random() - 0.5) * 0.5;
+        velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.5;
+      }
+
+      particles.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+      const particleMaterial = new THREE.PointsMaterial({
+        color: 0xff4500,
+        size: 2,
+        transparent: true,
+        opacity: 0.6,
+      });
+
+      particleSystem = new THREE.Points(particles, particleMaterial);
+      particleScene.add(particleSystem);
+
+      particleCamera.position.z = 500;
+
+      // Animation Loop
+      const animate = () => {
+        animationFrameId.current = requestAnimationFrame(animate);
+
+        for (let i = 0; i < particleCount; i++) {
+          positions[i * 3] += velocities[i * 3];
+          positions[i * 3 + 1] += velocities[i * 3 + 1];
+          positions[i * 3 + 2] += velocities[i * 3 + 2];
+
+          if (Math.abs(positions[i * 3]) > 500) velocities[i * 3] *= -1;
+          if (Math.abs(positions[i * 3 + 1]) > 500) velocities[i * 3 + 1] *= -1;
+          if (Math.abs(positions[i * 3 + 2]) > 500) velocities[i * 3 + 2] *= -1;
+        }
+
+        particleSystem.geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+        particleRenderer.render(particleScene, particleCamera);
+      };
+
+      animate();
+
+      // Handle Window Resize
+      const handleResize = () => {
+        particleCamera.aspect = window.innerWidth / particleCanvas.clientHeight;
+        particleCamera.updateProjectionMatrix();
+        particleRenderer.setSize(window.innerWidth, particleCanvas.clientHeight);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      // Cleanup
+      return () => {
+        if (animationFrameId.current) {
+          cancelAnimationFrame(animationFrameId.current);
+        }
+        window.removeEventListener("resize", handleResize);
+        particleRenderer.dispose();
+      };
+    }
+  }, []);
 
   const toggleMenu = () => {
     if (isMenuOpen) {
@@ -63,7 +144,6 @@ const Navbar = () => {
       }
     };
 
-    // Listen for both mouse and touch events
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("touchstart", handleClickOutside);
 
@@ -74,8 +154,12 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="w-full bg-black shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <header className="w-full fixed top-0 z-50 bg-black/30 backdrop-blur-md shadow-sm">
+      <canvas
+        ref={canvasRef}
+        className="absolute top-0 left-0 w-full h-full z-[-1]"
+      />
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between relative">
         <Link to="/" className="flex items-center space-x-2">
           <div className="flex items-center">
             <img src="/techori2.png" alt="Techori Logo" className="h-10 w-auto" />
@@ -112,11 +196,15 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
+        
         <div
           ref={menuRef}
-          className={`md:hidden bg-black w-1/2  absolute right-0 py-4 shadow-lg ${isClosing ? 'slide-out-right' : 'slide-in-right'}`}
+          className={`md:hidden bg-black/80 backdrop-blur-md w-full absolute right-0 top-full py-2 shadow-lg ${
+            isClosing ? "slide-out-right" : "slide-in-right"
+          }`}
         >
           <nav className="container mx-auto px-4">
+            
             <ul className="flex flex-col space-y-3">
               <NavItem href="/" className="text-lg" closeMenu={closeMenu}>Home</NavItem>
               <NavItem href="/about" className="text-lg" closeMenu={closeMenu}>About Us</NavItem>
