@@ -78,9 +78,9 @@ const About = () => {
                                 <div className="w-20 h-20 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-4">
                                   <Heart className="h-10 w-10 text-orange-500" />
                                 </div>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Mission</h3>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation for All</h3>
                                 <p className="text-gray-600">
-                                  To bridge the gap between innovation and accessibility by delivering cutting-edge IT solutions, smart applications, and public Wi-Fi services — empowering businesses and individuals to thrive in a digitally connected world.
+                                 Empowering individuals and businesses through accessible innovation by delivering advanced IT solutions, smart applications, and public Wi-Fi—enabling inclusive growth in a digitally connected world..
                                 </p>
                               </div>
                             </div>
