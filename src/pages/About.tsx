@@ -193,7 +193,7 @@ const About = () => {
               {
                 name: "Dinesh Kumar Sharma",
                 position: "Authorised Director Of Rishishwar Industry Private limited",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+                image: "",
                 bio: "An expert in emerging technologies, Samantha drives our technical innovation."
               },
               {
