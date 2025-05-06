@@ -30,6 +30,7 @@ const Navbar = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
+
   useEffect(() => {
     // Particle System Setup
     let particleScene, particleCamera, particleRenderer, particleSystem, positions, velocities;
@@ -177,7 +178,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center space-x-2">
           <div className="flex items-center">
             <img
-              src={isHomePage ? "/techori2.png" : "/techori-alt.png"}
+              src={isHomePage ? "/techori2.png" : "/techori2.png"}
               alt="Techori Logo"
               className="h-10 w-auto"
             />
