@@ -78,72 +78,48 @@ const Contact = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-4">Send Us a Message</h2>
-                <p className="text-gray-700 mb-6">
-                  Fill out the form and our team will get back to you within 24 hours. We're here to answer any questions you may have about our services.
-                </p>
-                <div className="bg-techori-purple/10 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg mb-2">What happens next?</h3>
-                  <ol className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="bg-techori-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 flex-shrink-0">1</span>
-                      <span>We'll reach out to schedule a call to understand your needs</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-techori-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 flex-shrink-0">2</span>
-                      <span>Our team will create a tailored proposal for your project</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-techori-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 flex-shrink-0">3</span>
-                      <span>We'll collaborate to refine the approach and get started</span>
-                    </li>
-                  </ol>
-                </div>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
-                      <Input id="name" placeholder="John Doe" required />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="john@example.com" required />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" placeholder="+1 (555) 123-4567" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="How can we help you?" required />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Please provide details about your project or inquiry..." 
-                      className="min-h-32"
-                      required
-                    />
-                  </div>
-                  <Button type="submit" className="w-full bg-techori-purple hover:bg-techori-blue">
-                    Send Message
-                  </Button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      export default function Contact() {
+  const [result, setResult] = React.useState("");
 
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
+  return (
+    <div>
+      <form onSubmit={onSubmit}>
+        <input type="text" name="name" required/>
+        <input type="email" name="email" required/>
+        <textarea name="message" required></textarea>
+
+        <button type="submit">Submit Form</button>
+
+      </form>
+      <span>{result}</span>
+
+    </div>
+  );
+}
+<input type="hidden" name="access_key" value="f90e7c4a-3d40-4c50-9506-87dc536dfda8">
       {/* Map Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
