@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-techori-purple/10 to-techori-blue/10">
+      <section className="py-26 bg-gradient-to-r from-techori-purple/10 to-techori-blue/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
@@ -38,25 +38,25 @@ const Contact = () => {
               {
                 icon: <Phone className="h-10 w-10 text-techori-purple" />,
                 title: "Call Us",
-                details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+                details: ["+91 75660 72349", "+91 626844240"],
                 action: "Give us a call"
               },
               {
                 icon: <Mail className="h-10 w-10 text-techori-purple" />,
                 title: "Email Us",
-                details: ["info@techori.com", "support@techori.com"],
+                details: ["info@techori.in", "info@rishishwarindustry.in", "support@techori.in"],
                 action: "Send an email"
               },
               {
                 icon: <MapPin className="h-10 w-10 text-techori-purple" />,
                 title: "Visit Us",
-                details: ["123 Tech Boulevard", "San Francisco, CA 94105"],
+                details: ["Rishishwar Industry Private limited, Mahadaji Nagar, Lashkar, Gird, Gwalior, Madhya Pradesh, Bharat - 474001"],
                 action: "Get directions"
               },
               {
                 icon: <MessageSquare className="h-10 w-10 text-techori-purple" />,
                 title: "Live Chat",
-                details: ["Available 9 AM - 5 PM", "Monday to Friday"],
+                details: ["Available 10 AM - 07 PM", "Monday to Saturday"],
                 action: "Start a chat"
               }
             ].map((item, index) => (
