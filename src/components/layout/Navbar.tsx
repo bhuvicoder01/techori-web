@@ -42,7 +42,7 @@ const Navbar = () => {
       particleRenderer.setSize(window.innerWidth, particleCanvas.clientHeight);
 
       const particles = new THREE.BufferGeometry();
-      const particleCount = 500;
+      const particleCount = 700;
       positions = new Float32Array(particleCount * 3);
       velocities = new Float32Array(particleCount * 3);
 
@@ -67,7 +67,7 @@ const Navbar = () => {
       particleSystem = new THREE.Points(particles, particleMaterial);
       particleScene.add(particleSystem);
 
-      particleCamera.position.z = 500;
+      particleCamera.position.z = 15;
 
       // Animation Loop
       const animate = () => {
@@ -189,7 +189,6 @@ const Navbar = () => {
           <ul className="flex space-x-8">
             <NavItem href="/" closeMenu={closeMenu}>Home</NavItem>
             <NavItem href="/about" closeMenu={closeMenu}>About Us</NavItem>
-            <NavItem href="/about1" closeMenu={closeMenu}>About Us 1</NavItem>
             <NavItem href="/services" closeMenu={closeMenu}>Services</NavItem>
             <NavItem href="/portfolio" closeMenu={closeMenu}>Portfolio</NavItem>
             <NavItem href="/careers" closeMenu={closeMenu}>Careers</NavItem>

@@ -112,7 +112,8 @@ export default {
 				'slide-up': 'slide-up 0.6s ease-out'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif']
+				sans: ['Inter', 'sans-serif'],
+				poppins: ['Poppins', 'sans-serif'],
 			},
 			backgroundImage: {
 				'techori-gradient': 'linear-gradient(90deg, #F97316 0%, #ea384c 100%)'
