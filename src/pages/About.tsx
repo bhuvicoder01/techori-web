@@ -359,7 +359,7 @@ const About = () => {
                   { number: "80+", label: "Projects Completed" },
                   { number: "50+", label: "Happy Clients" },
                   { number: "150+", label: "Team Members" },
-                  { number: "16+", label: "Countries Served" },
+                  { number: "17+", label: "Countries Served" },
                 ].map((stat, index) => (
                   <div key={index} className="p-6">
                     <p className="text-4xl md:text-5xl font-bold mb-2 text-orange-500">{stat.number}</p>
