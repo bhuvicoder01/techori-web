@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-26 bg-gradient-to-r from-techori-purple/10 to-techori-blue/10">
+      <section className="py-30 bg-gradient-to-r from-techori-purple/10 to-techori-blue/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
@@ -31,7 +31,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-8 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
