@@ -117,7 +117,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-16 bg-white">
+      <section className="py-26 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
