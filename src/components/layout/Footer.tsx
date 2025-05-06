@@ -48,10 +48,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/services/it-solutions" className="text-gray-300 hover:text-techori-purple">IT Solutions</Link></li>
-              <li><Link to="/services/web-app" className="text-gray-300 hover:text-techori-purple">Web & App Development</Link></li>
-              <li><Link to="/services/wifi" className="text-gray-300 hover:text-techori-purple">Public Wi-Fi</Link></li>
-              <li><Link to="/services/robotics" className="text-gray-300 hover:text-techori-purple">Robotics Development</Link></li>
+              <li><Link to="/IT solution" className="text-gray-300 hover:text-techori-purple">IT Solutions</Link></li>
+              <li><Link to="/WebAppDevelopment" className="text-gray-300 hover:text-techori-purple">Web & App Development</Link></li>
+              <li><Link to="/WiFiSolutions" className="text-gray-300 hover:text-techori-purple">Public Wi-Fi</Link></li>
+              <li><Link to="/SaasProducts" className="text-gray-300 hover:text-techori-purple">Saas Products</Link></li>
+              <li><Link to="/pages/robotics-development" className="text-gray-300 hover:text-techori-purple">Robotics Development</Link></li>
             </ul>
           </div>
 
@@ -62,7 +63,7 @@ const Footer = () => {
               <li><Link to="/about" className="text-gray-300 hover:text-techori-purple">About Us</Link></li>
               <li><Link to="/portfolio" className="text-gray-300 hover:text-techori-purple">Portfolio</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-techori-purple">Careers</Link></li>
-              <li><Link to="/blog" className="text-gray-300 hover:text-techori-purple">Blog</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-techori-purple">contact us</Link></li>
             </ul>
           </div>
 
@@ -74,6 +75,7 @@ const Footer = () => {
               <li><Link to="/pricing" className="text-gray-300 hover:text-techori-purple">Pricing</Link></li>
               <li><Link to="/login" className="text-gray-300 hover:text-techori-purple">Client Dashboard</Link></li>
               <li><Link to="/privacy-policy" className="text-gray-300 hover:text-techori-purple">Privacy Policy</Link></li>
+              <li><Link to="/TC" className="text-gray-300 hover:text-techori-purple">Terms Of Conditions </Link></li>
             </ul>
           </div>
         </div>
