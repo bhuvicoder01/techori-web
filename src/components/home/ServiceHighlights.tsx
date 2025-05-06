@@ -69,7 +69,7 @@ const ServiceHighlights = () => {
                 <polyline points="2 12 12 17 22 12"></polyline>
               </svg>
             }
-            link="/services/web-app"
+            link="/pages/WebAppDevelopment.tsx"
           />
           <ServiceCard
             title="Public Wi-Fi Solutions"
@@ -82,7 +82,7 @@ const ServiceHighlights = () => {
                 <line x1="12" y1="20" x2="12.01" y2="20"></line>
               </svg>
             }
-            link="/services/wifi"
+            link="/pages/WiFiSolutions.tsx"
           />
           <ServiceCard
             title="Robotics Development"
@@ -96,7 +96,7 @@ const ServiceHighlights = () => {
                 <line x1="16" y1="16" x2="16" y2="16"></line>
               </svg>
             }
-            link="/services/robotics"
+            link="/pages/robotics-development.tsx"
           />
         </div>
       </div>
