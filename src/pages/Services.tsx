@@ -41,7 +41,7 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-techori-purple/10 to-techori-blue/10">
+      <section className="py-24 bg-gradient-to-r from-techori-purple/10 to-techori-blue/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
