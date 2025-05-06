@@ -57,7 +57,7 @@ const ServiceHighlights = () => {
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             }
-            link="/src/pages/IT Solution.tsx"
+            link="/pages/IT Solution.tsx"
           />
           <ServiceCard
             title="Web & App Development"
