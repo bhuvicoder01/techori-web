@@ -37,15 +37,16 @@ const Navbar = () => {
 
     if (particleCanvas) {
       particleScene = new THREE.Scene();
-      particleCamera = new THREE.PerspectiveCamera(10, window.innerWidth / particleCanvas.clientHeight, 0.1, 1000);
+      particleCamera = new THREE.PerspectiveCamera(75, window.innerWidth / particleCanvas.clientHeight, 0.1, 1000);
       particleRenderer = new THREE.WebGLRenderer({ alpha: true, canvas: particleCanvas });
       particleRenderer.setSize(window.innerWidth, particleCanvas.clientHeight);
 
       const particles = new THREE.BufferGeometry();
-      const particleCount = 2000;
-      positions = new Float32Array(particleCount * 5);
-      velocities = new Float32Array(particleCount * 5);
+      const particleCount = 500;
+      positions = new Float32Array(particleCount * 3);
+      velocities = new Float32Array(particleCount * 3);
 
+      // Initialize positions and velocities
       for (let i = 0; i < particleCount; i++) {
         positions[i * 3] = (Math.random() - 0.5) * 1000;
         positions[i * 3 + 1] = (Math.random() - 0.5) * 1000;
@@ -73,16 +74,27 @@ const Navbar = () => {
         animationFrameId.current = requestAnimationFrame(animate);
 
         for (let i = 0; i < particleCount; i++) {
+          // Update positions
           positions[i * 3] += velocities[i * 3];
           positions[i * 3 + 1] += velocities[i * 3 + 1];
           positions[i * 3 + 2] += velocities[i * 3 + 2];
 
-          if (Math.abs(positions[i * 3]) > 500) velocities[i * 3] *= -1;
-          if (Math.abs(positions[i * 3 + 1]) > 500) velocities[i * 3 + 1] *= -1;
-          if (Math.abs(positions[i * 3 + 2]) > 500) velocities[i * 3 + 2] *= -1;
+          // Boundary checks with NaN prevention
+          if (Math.abs(positions[i * 3]) > 500 || isNaN(positions[i * 3])) {
+            velocities[i * 3] *= -1;
+            positions[i * 3] = Math.max(-500, Math.min(500, positions[i * 3]));
+          }
+          if (Math.abs(positions[i * 3 + 1]) > 500 || isNaN(positions[i * 3 + 1])) {
+            velocities[i * 3 + 1] *= -1;
+            positions[i * 3 + 1] = Math.max(-500, Math.min(500, positions[i * 3 + 1]));
+          }
+          if (Math.abs(positions[i * 3 + 2]) > 500 || isNaN(positions[i * 3 + 2])) {
+            velocities[i * 3 + 2] *= -1;
+            positions[i * 3 + 2] = Math.max(-500, Math.min(500, positions[i * 3 + 2]));
+          }
         }
 
-        particleSystem.geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+        particles.setAttribute("position", new THREE.BufferAttribute(positions, 3));
         particleRenderer.render(particleScene, particleCamera);
       };
 
@@ -165,7 +177,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center space-x-2">
           <div className="flex items-center">
             <img
-              src='/techori2.png'
+              src={isHomePage ? "/techori2.png" : "/techori-alt.png"}
               alt="Techori Logo"
               className="h-10 w-auto"
             />
@@ -177,6 +189,7 @@ const Navbar = () => {
           <ul className="flex space-x-8">
             <NavItem href="/" closeMenu={closeMenu}>Home</NavItem>
             <NavItem href="/about" closeMenu={closeMenu}>About Us</NavItem>
+            <NavItem href="/about1" closeMenu={closeMenu}>About Us 1</NavItem>
             <NavItem href="/services" closeMenu={closeMenu}>Services</NavItem>
             <NavItem href="/portfolio" closeMenu={closeMenu}>Portfolio</NavItem>
             <NavItem href="/careers" closeMenu={closeMenu}>Careers</NavItem>

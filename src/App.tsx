@@ -11,6 +11,8 @@ import Portfolio from "./pages/Portfolio";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ITSolutions from "./pages/IT Solution";
+import WiFiSolutions from "./pages/WiFiSolutions";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/login" element={<NotFound />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/services/Wifi-solutions" element={<WiFiSolutions />} />
+          <Route path="/services/it-solutions" element={<ITSolutions />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

@@ -27,7 +27,7 @@ const Services = () => {
       description: "Reliable, secure, and high-performance wireless connectivity solutions for businesses, events, and public spaces.",
       icon: <Wifi className="h-12 w-12 text-techori-blue" />,
       features: ["Analytics Dashboard", "Captive Portal", "Multi-location Setup", "Advanced Security"],
-      link: "/services/wifi"
+      link: "/services/WiFI-solutions"
     },
     {
       title: "Robotics Development",
