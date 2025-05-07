@@ -8,11 +8,9 @@ const TechoriAnimation = () => {
   const techoriDone = useRef(false);
   const sloganDone = useRef(false);
 
-  const tlettersize=window.innerWidth < 768 ?'7xl':'64';
-  const echorisize=window.innerWidth < 768 ?'6xl':'7xl';
-  const sloganSize=window.innerWidth < 768 ?'xs':'32';
-
-
+  const tlettersize = window.innerWidth < 768 ? '7xl' : '64';
+  const echorisize = window.innerWidth < 768 ? '6xl' : '7xl';
+  const sloganSize = window.innerWidth < 768 ? 'xs' : '32';
 
   useEffect(() => {
     // Particle System Setup
@@ -93,8 +91,8 @@ const TechoriAnimation = () => {
         if (!letter) return;
         const style = letter.style;
         let left = parseFloat(style.left) || window.innerWidth;
-        let velocity = parseFloat(style.getPropertyValue('--velocity')) || -2;
-        const finalPosHorizontal =window.innerWidth < 768 ? 37:25; // Align with left edge of "t"
+        let velocity = parseFloat(style.getPropertyValue('--velocity')) || -4; // Increased speed from -2 to -4
+        const finalPosHorizontal = window.innerWidth < 768 ? 37 : 25; // Align with left edge of "t"
         const finalPosVertical = window.innerWidth < 768 ? window.innerHeight / 2 - 400 : window.innerHeight / 2 - 428;
 
         if (left > finalPosHorizontal) {
@@ -197,7 +195,7 @@ const TechoriAnimation = () => {
                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
                 position: "relative",
                 left: `${window.innerWidth}px`, // Start from right edge
-                "--velocity": "-2",
+                "--velocity": "-4", // Increased speed from -2 to -4
               }}
             >
               {char === " " ? "\u00A0" : char}
