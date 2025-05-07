@@ -186,7 +186,7 @@ const TechoriAnimation = () => {
             <span
               key={index}
               ref={(el) => (sloganRef.current[index] = el)}
-              className={`inline-block text-xs md:text-sm text-white`}
+              className={`inline-block transition-all duration-200 ease-out hover:scale-150 text-xs md:text-sm text-white`}
               style={{
                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
                 position: "relative",
