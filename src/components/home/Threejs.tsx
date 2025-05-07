@@ -94,7 +94,7 @@ const TechoriAnimation = () => {
         const style = letter.style;
         let left = parseFloat(style.left) || window.innerWidth;
         let velocity = parseFloat(style.getPropertyValue('--velocity')) || -2;
-        const finalPosHorizontal =window.innerWidth < 768 ? 37:32; // Align with left edge of "t"
+        const finalPosHorizontal =window.innerWidth < 768 ? 37:25; // Align with left edge of "t"
         const finalPosVertical = window.innerWidth < 768 ? window.innerHeight / 2 - 400 : window.innerHeight / 2 - 428;
 
         if (left > finalPosHorizontal) {
@@ -187,12 +187,12 @@ const TechoriAnimation = () => {
             </span>
           ))}
         </h1>
-        <h2 className="text-xs md:text-xs font-semibold flex items-center justify-center space-x-0.5">
+        <h2 className="text-xs md:text-xs flex items-center justify-center space-x-0.5">
           {"INNOVATION IS OUR PASSION".split("").map((char, index) => (
             <span
               key={index}
               ref={(el) => (sloganRef.current[index] = el)}
-              className={`inline-block transition-all duration-200 ease-out hover:scale-150 text-${sloganSize} md:text-xl text-white`}
+              className={`inline-block transition-all duration-200 ease-out hover:scale-150 text-${sloganSize} md:text-xs text-white`}
               style={{
                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
                 position: "relative",
