@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,6 +15,8 @@ import WiFiSolutions from "./pages/WiFiSolutions";
 import SaasProducts from "./pages/SaasProducts";
 import RoboticsDevelopment from "./pages/robotics-development";
 import WebAppDevelopment from "./pages/WebAppDevelopment";
+import Terms from "./pages/terms";
+import PrivacyPolicy from "./pages/privacy-policy";
 
 const queryClient = new QueryClient();
 
@@ -36,10 +37,12 @@ const App = () => (
 
           <Route path="/Wifi-solutions" element={<WiFiSolutions />} />
 
-<Route path="/it-solutions" element={<ITSolutions />} />
+          <Route path="/it-solutions" element={<ITSolutions />} />
           <Route path="/saas-products" element={<SaasProducts />} />
           <Route path="/robotics-development" element={<RoboticsDevelopment />} />
           <Route path="/webapp-development" element={<WebAppDevelopment />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

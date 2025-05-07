@@ -75,7 +75,7 @@ const Footer = () => {
               <li><Link to="/pricing" className="text-gray-300 hover:text-techori-purple">Pricing</Link></li>
               <li><Link to="/login" className="text-gray-300 hover:text-techori-purple">Client Dashboard</Link></li>
               <li><Link to="/privacy-policy" className="text-gray-300 hover:text-techori-purple">Privacy Policy</Link></li>
-              <li><Link to="/TC" className="text-gray-300 hover:text-techori-purple">Terms Of Conditions </Link></li>
+              <li><Link to="/terms" className="text-gray-300 hover:text-techori-purple">Terms Of Conditions </Link></li>
             </ul>
           </div>
         </div>
