@@ -37,7 +37,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-full mr-20 h-80  bg-gradient-to-br from-techori-orange/20 to-techori-red/20 rounded-lg flex items-center justify-center relative">
                 <div className="flex items-center">
-                  <div className="w-24 h-24 md:h-32 mr-10 ml-10">
+                  <div className="w-24 h-24 md:h-32 mr-12 ml-12">
                     <TechoriAnimation />
                   </div>
 

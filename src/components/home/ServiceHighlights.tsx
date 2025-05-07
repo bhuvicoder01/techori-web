@@ -109,7 +109,7 @@ const ServiceHighlights = () => {
                 <line x1="16" y1="16" x2="16" y2="16"></line>
               </svg>
             }
-            link="/pages/robotics-development.tsx"
+            link="/robotics-development.tsx"
           />
         </div>
       </div>

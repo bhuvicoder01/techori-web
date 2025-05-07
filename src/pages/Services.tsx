@@ -13,28 +13,28 @@ const Services = () => {
       description: "Comprehensive IT infrastructure support, security solutions, and managed services designed to optimize your business operations.",
       icon: <Wrench className="h-12 w-12 text-techori-blue" />,
       features: ["Network Infrastructure", "Cybersecurity", "Cloud Migration", "IT Consulting"],
-      link: "/services/it-solutions"
+      link: "/it-solutions"
     },
     {
       title: "Web & App Development",
       description: "Custom websites and mobile applications built with cutting-edge technologies and exceptional user experiences.",
       icon: <Code className="h-12 w-12 text-techori-blue" />,
       features: ["Responsive Websites", "Mobile Apps", "E-commerce", "Custom Web Platforms"],
-      link: "/services/web-app"
+      link: "/webapp-development"
     },
     {
       title: "Public Wi-Fi Solutions",
       description: "Reliable, secure, and high-performance wireless connectivity solutions for businesses, events, and public spaces.",
       icon: <Wifi className="h-12 w-12 text-techori-blue" />,
       features: ["Analytics Dashboard", "Captive Portal", "Multi-location Setup", "Advanced Security"],
-      link: "/services/WiFI-solutions"
+      link: "/WiFI-solutions"
     },
     {
       title: "Robotics Development",
       description: "Innovative robotics solutions that automate processes, increase efficiency, and transform business operations.",
       icon: <Bot className="h-12 w-12 text-techori-blue" />,
       features: ["Automation Solutions", "Custom Robotics", "AI Integration", "Industrial Applications"],
-      link: "/services/robotics"
+      link: "/robotics-development"
     }
   ];
 
