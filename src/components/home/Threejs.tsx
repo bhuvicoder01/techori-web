@@ -8,20 +8,6 @@ const TechoriAnimation = () => {
   const techoriDone = useRef(false);
   const sloganDone = useRef(false);
 
-  // Customization Settings for Font Sizes
-  const tFontSizeMobile = "10lg"; // Mobile font size for "t" character
-  const tFontSizeDesktop = "10xl"; // Desktop font size for "t" character
-  const techoriFontSizeMobile = "5xl"; // Mobile font size for other "techori" letters
-  const techoriFontSizeDesktop = "9xl"; // Desktop font size for other "techori" letters
-  const sloganFontSizeMobile = "xs"; // Mobile font size for slogan
-  const sloganFontSizeDesktop = "sm"; // Desktop font size for slogan
-
-  // Customization Settings for Animation Positioning
-  const techoriFinalPosMobile = window.innerHeight / 2 - 350; // Mobile vertical final position for "techori"
-  const techoriFinalPosDesktop = window.innerHeight / 2 - 390; // Desktop vertical final position for "techori"
-  const sloganFinalPosMobile = window.innerHeight / 2 - 380; // Mobile vertical final position for slogan
-  const sloganFinalPosDesktop = window.innerHeight / 2 - 428; // Desktop vertical final position for slogan
-
   useEffect(() => {
     // Particle System Setup
     let particleScene, particleCamera, particleRenderer, particleSystem, positions, velocities;
@@ -71,7 +57,7 @@ const TechoriAnimation = () => {
         let velocity = parseFloat(style.getPropertyValue('--velocity')) || 0;
         const gravity = 0.02;
         const bounce = -0.009;
-        const finalPos = window.innerWidth < 768 ? techoriFinalPosMobile : techoriFinalPosDesktop;
+        const finalPos = window.innerWidth < 768 ? window.innerHeight / 2 - 200 : window.innerHeight / 2 - 390;
 
         if (top < finalPos) {
           velocity += gravity;
@@ -102,8 +88,8 @@ const TechoriAnimation = () => {
         const style = letter.style;
         let left = parseFloat(style.left) || window.innerWidth;
         let velocity = parseFloat(style.getPropertyValue('--velocity')) || -2;
-        const finalPosHorizontal =window.innerWidth < 768 ? 48:32; // Align with left edge of "t"
-        const finalPosVertical = window.innerWidth < 768 ? sloganFinalPosMobile : sloganFinalPosDesktop;
+        const finalPosHorizontal = 32; // Align with left edge of "t"
+        const finalPosVertical = window.innerWidth < 768 ? window.innerHeight / 2 - 350 : window.innerHeight / 2 - 428;
 
         if (left > finalPosHorizontal) {
           left += velocity;
@@ -176,18 +162,14 @@ const TechoriAnimation = () => {
     <div className="relative w-full h-full">
       <canvas id="particle-canvas" className="absolute top-0 left-0 w-full h-full" />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-        <h1 className={`text-${techoriFontSizeMobile} md:text-${techoriFontSizeDesktop} font-bold flex items-center justify-center space-x-1`}>
+        <h1 className="text-4xl md:text-9xl font-bold flex items-center justify-center space-x-1">
           {"techori".split("").map((char, index) => (
             <span
               key={index}
               ref={(el) => (lettersRef.current[index] = el)}
               className={`inline-block transition-all duration-200 ease-out hover:scale-125 hover:${
                 Math.random() > 0.5 ? "translate-y-[-15px]" : "translate-y-[15px]"
-              } hover:rotate-6 ${
-                index === 0
-                  ? `text-orange-600 text-${tFontSizeMobile} md:text-${tFontSizeDesktop}`
-                  : `text-white text-${techoriFontSizeMobile} md:text-7xl`
-              }`}
+              } hover:rotate-6 ${index === 0 ? "text-orange-600" : "text-white md:text-7xl"}`}
               style={{
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
                 position: "relative",
@@ -199,12 +181,12 @@ const TechoriAnimation = () => {
             </span>
           ))}
         </h1>
-        <h2 className={`text-${sloganFontSizeMobile} md:text-${sloganFontSizeDesktop} font-semibold flex items-center justify-center space-x-0.5`}>
+        <h2 className="text-xs md:text-sm font-semibold flex items-center justify-center space-x-0.5">
           {"INNOVATION IS OUR PASSION".split("").map((char, index) => (
             <span
               key={index}
               ref={(el) => (sloganRef.current[index] = el)}
-              className={`inline-block text-${sloganFontSizeMobile} md:text-${sloganFontSizeDesktop} text-white`}
+              className={`inline-block text-xs md:text-sm text-white`}
               style={{
                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
                 position: "relative",
