@@ -13,6 +13,9 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ITSolutions from "./pages/IT Solution";
 import WiFiSolutions from "./pages/WiFiSolutions";
+import SaasProducts from "./pages/SaasProducts";
+import RoboticsDevelopment from "./pages/robotics-development";
+import WebAppDevelopment from "./pages/WebAppDevelopment";
 
 const queryClient = new QueryClient();
 
@@ -30,10 +33,16 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<NotFound />} />
+
+          <Route path="/Wifi-solutions" element={<WiFiSolutions />} />
+
+<Route path="/it-solutions" element={<ITSolutions />} />
+          <Route path="/saas-products" element={<SaasProducts />} />
+          <Route path="/robotics-development" element={<RoboticsDevelopment />} />
+          <Route path="/webapp-development" element={<WebAppDevelopment />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
-          <Route path="/services/Wifi-solutions" element={<WiFiSolutions />} />
-          <Route path="/services/it-solutions" element={<ITSolutions />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

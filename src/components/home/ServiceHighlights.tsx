@@ -95,7 +95,7 @@ const ServiceHighlights = () => {
                 <line x1="12" y1="20" x2="12.01" y2="20"></line>
               </svg>
             }
-            link="/pages/WiFiSolutions.tsx"
+            link="/saas-products"
           />
           <ServiceCard
             title="Robotics Development"

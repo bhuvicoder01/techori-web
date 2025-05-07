@@ -48,11 +48,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/IT solution" className="text-gray-300 hover:text-techori-purple">IT Solutions</Link></li>
-              <li><Link to="/WebAppDevelopment" className="text-gray-300 hover:text-techori-purple">Web & App Development</Link></li>
-              <li><Link to="/WiFiSolutions" className="text-gray-300 hover:text-techori-purple">Public Wi-Fi</Link></li>
-              <li><Link to="/SaasProducts" className="text-gray-300 hover:text-techori-purple">Saas Products</Link></li>
-              <li><Link to="/pages/robotics-development" className="text-gray-300 hover:text-techori-purple">Robotics Development</Link></li>
+              <li><Link to="/it-solutions" className="text-gray-300 hover:text-techori-purple">IT Solutions</Link></li>
+              <li><Link to="/webapp-development" className="text-gray-300 hover:text-techori-purple">Web & App Development</Link></li>
+              <li><Link to="/WiFi-solutions" className="text-gray-300 hover:text-techori-purple">Public Wi-Fi</Link></li>
+              <li><Link to="/saas-products" className="text-gray-300 hover:text-techori-purple">Saas Products</Link></li>
+              <li><Link to="/robotics-development" className="text-gray-300 hover:text-techori-purple">Robotics Development</Link></li>
             </ul>
           </div>
 

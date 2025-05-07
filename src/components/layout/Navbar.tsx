@@ -43,7 +43,7 @@ const Navbar = () => {
       particleRenderer.setSize(window.innerWidth, particleCanvas.clientHeight);
 
       const particles = new THREE.BufferGeometry();
-      const particleCount = 700;
+      const particleCount = 1000;
       positions = new Float32Array(particleCount * 3);
       velocities = new Float32Array(particleCount * 3);
 
@@ -68,8 +68,9 @@ const Navbar = () => {
       particleSystem = new THREE.Points(particles, particleMaterial);
       particleScene.add(particleSystem);
 
-      particleCamera.position.z = 15;
-
+      particleCamera.position.z = 45;
+      particleCamera.position.y = 45;
+      particleCamera.position.x = 100;
       // Animation Loop
       const animate = () => {
         animationFrameId.current = requestAnimationFrame(animate);
@@ -95,7 +96,7 @@ const Navbar = () => {
           }
         }
 
-        particles.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+        particles.setAttribute("position", new THREE.BufferAttribute(positions, 2));
         particleRenderer.render(particleScene, particleCamera);
       };
 
