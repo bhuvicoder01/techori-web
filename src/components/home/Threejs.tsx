@@ -8,6 +8,12 @@ const TechoriAnimation = () => {
   const techoriDone = useRef(false);
   const sloganDone = useRef(false);
 
+  const tlettersize=window.innerWidth < 768 ?'7xl':'64';
+  const echorisize=window.innerWidth < 768 ?'6xl':'7xl';
+  const sloganSize=window.innerWidth < 768 ?'xs':'32';
+
+
+
   useEffect(() => {
     // Particle System Setup
     let particleScene, particleCamera, particleRenderer, particleSystem, positions, velocities;
@@ -57,7 +63,7 @@ const TechoriAnimation = () => {
         let velocity = parseFloat(style.getPropertyValue('--velocity')) || 0;
         const gravity = 0.02;
         const bounce = -0.009;
-        const finalPos = window.innerWidth < 768 ? window.innerHeight / 2 - 200 : window.innerHeight / 2 - 390;
+        const finalPos = window.innerWidth < 768 ? window.innerHeight / 2 - 360 : window.innerHeight / 2 - 390;
 
         if (top < finalPos) {
           velocity += gravity;
@@ -88,8 +94,8 @@ const TechoriAnimation = () => {
         const style = letter.style;
         let left = parseFloat(style.left) || window.innerWidth;
         let velocity = parseFloat(style.getPropertyValue('--velocity')) || -2;
-        const finalPosHorizontal = 32; // Align with left edge of "t"
-        const finalPosVertical = window.innerWidth < 768 ? window.innerHeight / 2 - 350 : window.innerHeight / 2 - 428;
+        const finalPosHorizontal =window.innerWidth < 768 ? 37:32; // Align with left edge of "t"
+        const finalPosVertical = window.innerWidth < 768 ? window.innerHeight / 2 - 400 : window.innerHeight / 2 - 428;
 
         if (left > finalPosHorizontal) {
           left += velocity;
@@ -162,14 +168,14 @@ const TechoriAnimation = () => {
     <div className="relative w-full h-full">
       <canvas id="particle-canvas" className="absolute top-0 left-0 w-full h-full" />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-        <h1 className="text-4xl md:text-9xl font-bold flex items-center justify-center space-x-1">
+        <h1 className="text-9xl md:text-9xl font-bold flex items-center justify-center space-x-1">
           {"techori".split("").map((char, index) => (
             <span
               key={index}
               ref={(el) => (lettersRef.current[index] = el)}
               className={`inline-block transition-all duration-200 ease-out hover:scale-125 hover:${
                 Math.random() > 0.5 ? "translate-y-[-15px]" : "translate-y-[15px]"
-              } hover:rotate-6 ${index === 0 ? "text-orange-600" : "text-white md:text-7xl"}`}
+              } hover:rotate-6 ${index === 0 ? `text-orange-600 text-${tlettersize}` : `text-white text-${echorisize} md:text-7xl`}`}
               style={{
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
                 position: "relative",
@@ -181,12 +187,12 @@ const TechoriAnimation = () => {
             </span>
           ))}
         </h1>
-        <h2 className="text-xs md:text-sm font-semibold flex items-center justify-center space-x-0.5">
+        <h2 className="text-xs md:text-xs font-semibold flex items-center justify-center space-x-0.5">
           {"INNOVATION IS OUR PASSION".split("").map((char, index) => (
             <span
               key={index}
               ref={(el) => (sloganRef.current[index] = el)}
-              className={`inline-block transition-all duration-200 ease-out hover:scale-150 text-xs md:text-sm text-white`}
+              className={`inline-block transition-all duration-200 ease-out hover:scale-150 text-${sloganSize} md:text-xl text-white`}
               style={{
                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
                 position: "relative",
