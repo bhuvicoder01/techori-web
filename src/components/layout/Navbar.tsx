@@ -188,7 +188,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-8">
+          <ul className="flex space-x-5 ">
             <NavItem href="/" closeMenu={closeMenu}>Home</NavItem>
             <NavItem href="/about" closeMenu={closeMenu}>About Us</NavItem>
             <NavItem href="/services" closeMenu={closeMenu}>Services</NavItem>
