@@ -24,7 +24,7 @@ const TechoriAnimation = () => {
       particleRenderer.setSize(window.innerWidth, window.innerHeight);
 
       const particles = new THREE.BufferGeometry();
-      const particleCount = 1000;
+      const particleCount = 5000;
       positions = new Float32Array(particleCount * 3);
       velocities = new Float32Array(particleCount * 3);
 
@@ -37,7 +37,7 @@ const TechoriAnimation = () => {
         velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.5;
       }
 
-      particles.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+      particles.setAttribute("position", new THREE.BufferAttribute(positions, 4));
       const particleMaterial = new THREE.PointsMaterial({
         color: 0xff4500,
         size: 2,
