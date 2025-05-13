@@ -69,7 +69,7 @@ const ServiceHighlights = () => {
                 <polyline points="2 12 12 17 22 12"></polyline>
               </svg>
             }
-            link="/pages/WebAppDevelopment.tsx"
+            link="/webapp-development"
           />
           <ServiceCard
             title="Public Wi-Fi Solutions"
