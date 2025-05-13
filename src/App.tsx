@@ -43,8 +43,8 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       
-          <Route path="/EnterpriseWebPortal" element={<EnterpriseWebPortal />} /
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/EnterpriseWebPortal" element={<EnterpriseWebPortal />} />
+          /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

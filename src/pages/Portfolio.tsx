@@ -6,6 +6,14 @@ import { Link } from "react-router-dom";
 import { Filter, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
 
 
 const Portfolio = () => {
