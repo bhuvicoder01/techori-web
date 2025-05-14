@@ -18,7 +18,11 @@ import WebAppDevelopment from "./pages/WebAppDevelopment";
 import Terms from "./pages/terms";
 import PrivacyPolicy from "./pages/privacy-policy";
 import EnterpriseWebPortal from "./pages/EnterpriseWebPortal.tsx";
-
+import FinancialServicesPlatform from "./pages/FinancialServicesPlatform.tsx";
+import HealthcareDataPlatform from "./pages/HealthcareDataPlatform.tsx";
+import SmartCityWiFi from "./pages/SmartCityWiFi.tsx";
+import SmartRetailSolution from "./pages/SmartRetailSolution.tsx";
+import WarehouseAutomation from "./pages/WarehouseAutomation.tsx";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -28,6 +32,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+           <Route path="/WarehouseAutomation" element={<WarehouseAutomation />} />
+          <Route path="/SmartRetailSolution" element={<SmartRetailSolution />} />
+          <Route path="/SmartCityWiFi" element={<SmartCityWiFi />} />
+          <Route path="/HealthcareDataPlatform" element={<HealthcareDataPlatform />} />
+          <Route path="/FinancialServicesPlatform" element={<FinancialServicesPlatform />} />
+          <Route path="/EnterpriseWebPortal" element={<EnterpriseWebPortal />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
@@ -41,9 +52,8 @@ const App = () => (
           <Route path="/robotics-development" element={<RoboticsDevelopment />} />
           <Route path="/webapp-development" element={<WebAppDevelopment />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      
-          <Route path="/EnterpriseWebPortal" element={<EnterpriseWebPortal />} />
+          
+        
           /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */
           <Route path="*" element={<NotFound />} />
         </Routes>
