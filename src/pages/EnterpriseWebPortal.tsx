@@ -3,7 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { CheckCircle, Zap, Cloud, Package } from "lucide-react";
+import { CheckCircle, Zap, Cloud, Package, Monitor, Server, Globe, Users } from "lucide-react";
 
 interface Product {
   title: string;
