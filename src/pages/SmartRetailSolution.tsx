@@ -2,8 +2,9 @@ import React, { FC } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
-import { CheckCircle, Zap, Cloud, Package } from "lucide-react";
+import { CheckCircle, Zap, Cloud, Package, Store, Database, SearchCheck } from "lucide-react";
 
 interface Product {
   title: string;
