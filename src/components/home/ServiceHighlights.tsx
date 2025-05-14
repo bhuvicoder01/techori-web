@@ -3,7 +3,6 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import React from 'react';
 import styled from 'styled-components';
 
 
