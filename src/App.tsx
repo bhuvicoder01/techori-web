@@ -32,12 +32,12 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-           <Route path="/WarehouseAutomation" element={<WarehouseAutomation />} />
-          <Route path="/SmartRetailSolution" element={<SmartRetailSolution />} />
-          <Route path="/SmartCityWiFi" element={<SmartCityWiFi />} />
-          <Route path="/HealthcareDataPlatform" element={<HealthcareDataPlatform />} />
-          <Route path="/FinancialServicesPlatform" element={<FinancialServicesPlatform />} />
-          <Route path="/EnterpriseWebPortal" element={<EnterpriseWebPortal />} />
+           <Route path="/Warehouse-Automation" element={<WarehouseAutomation />} />
+          <Route path="/Smart-Retail-Solution" element={<SmartRetailSolution />} />
+          <Route path="/Smart-City-WiFi" element={<SmartCityWiFi />} />
+          <Route path="/Healthcare-Data-Platform" element={<HealthcareDataPlatform />} />
+          <Route path="/Financial-Services-Platform" element={<FinancialServicesPlatform/>} />
+          <Route path="/Enterprise-WebPortal" element={<EnterpriseWebPortal/>} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
