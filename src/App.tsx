@@ -17,12 +17,12 @@ import RoboticsDevelopment from "./pages/robotics-development";
 import WebAppDevelopment from "./pages/WebAppDevelopment";
 import Terms from "./pages/terms";
 import PrivacyPolicy from "./pages/privacy-policy";
-import EnterpriseWebPortal from "./pages/EnterpriseWebPortal.tsx";
-import FinancialServicesPlatform from "./pages/FinancialServicesPlatform.tsx";
-import HealthcareDataPlatform from "./pages/HealthcareDataPlatform.tsx";
+import EnterpriseWebPortal from "./pages/EnterpriseWebPortal";
+import FinancialServicesPlatform from "./pages/FinancialServicesPlatform";
+import HealthcareDataPlatform from "./pages/HealthcareDataPlatform";
 import SmartCityWiFi from "./pages/SmartCityWiFi.tsx";
-import SmartRetailSolution from "./pages/SmartRetailSolution.tsx";
-import WarehouseAutomation from "./pages/WarehouseAutomation.tsx";
+import SmartRetailSolution from "./pages/SmartRetailSolution";
+import WarehouseAutomation from "./pages/WarehouseAutomation";
 const queryClient = new QueryClient();
 
 const App = () => (
