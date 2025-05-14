@@ -3,6 +3,9 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import React from 'react';
+import styled from 'styled-components';
+
 
 interface ServiceCardProps {
   title: string;
@@ -111,8 +114,7 @@ const ServiceHighlights = () => {
             }
             link="/robotics-development.tsx"
           />
-          import React from 'react';
-import styled from 'styled-components';
+          
 
 const Card = () => {
   return (
