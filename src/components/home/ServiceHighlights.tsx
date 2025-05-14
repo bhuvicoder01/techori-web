@@ -72,7 +72,7 @@ const ServiceHighlights = () => {
             link="/webapp-development"
           />
           <ServiceCard
-            title="Public Wi-Fi Solutions"
+            title="Public Wi-Fi Solutions service"
             description="Reliable and secure wireless connectivity solutions for public spaces and business environments."
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-techori-purple" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
