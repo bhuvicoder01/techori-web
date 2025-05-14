@@ -65,7 +65,7 @@ const FeaturedProjects = () => {
       category: "Robotics",
       description: "An advanced robotics system for warehouse inventory management and logistics.",
       imageSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 225' fill='none'%3E%3Crect width='400' height='225' fill='%23F97316' opacity='0.2'/%3E%3Crect x='125' y='75' width='150' height='100' rx='10' stroke='%23F97316' stroke-width='5' fill='%23F97316' opacity='0.5'/%3E%3Ccircle cx='150' cy='150' r='15' stroke='%23F97316' stroke-width='5' fill='%23FFFFFF'/%3E%3Ccircle cx='250' cy='150' r='15' stroke='%23F97316' stroke-width='5' fill='%23FFFFFF'/%3E%3Crect x='175' y='50' width='50' height='25' rx='5' stroke='%23F97316' stroke-width='5' fill='%23F97316' opacity='0.7'/%3E%3C/svg%3E",
-      link:"/WarehouseAutomation",
+      link:"/Warehouse-Automation",
     },
     {
       title: "Healthcare Data Platform",
