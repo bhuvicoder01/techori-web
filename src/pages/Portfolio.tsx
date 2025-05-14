@@ -284,10 +284,10 @@ const Portfolio = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[
-              { number: "25+", label: "SaaS Solutions" },
-              { number: "500+", label: "Projects Completed" },
-              { number: "150+", label: "Happy Clients" },
-              { number: "50+", label: "Expert Team Members" }
+              { number: "30+", label: "SaaS Solutions" },
+              { number: "80+", label: "Projects Completed" },
+              { number: "50+", label: "Happy Clients" },
+              { number: "150+", label: "Expert Team Members" }
             ].map((stat, index) => (
               <div key={index} className="bg-gradient-to-br from-techori-purple/10 to-techori-blue/10 p-6 rounded-lg shadow-md text-center">
                 <div className="text-4xl font-bold text-techori-purple mb-2">{stat.number}</div>
