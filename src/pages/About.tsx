@@ -352,7 +352,7 @@ const About = () => {
           </section>
 
           {/* Stats Section */}
-          <section className="py-16 bg-gray-50 text-gray-900">
+          <section className="py-16 bg-Black-50 text-White-900">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
