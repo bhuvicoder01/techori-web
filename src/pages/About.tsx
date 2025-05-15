@@ -3,6 +3,10 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Building, Users, GraduationCap, Handshake, CheckCircle, Activity, Heart, ArrowRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
 
 const About = () => {
   const [loaded, setLoaded] = useState(false);
@@ -295,6 +299,8 @@ const About = () => {
             </div>
           </section>
 
+
+          
           {/* Team Section */}
           <section className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">
@@ -356,14 +362,14 @@ const About = () => {
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
-                  { number: "85+", label: "Projects Completed" },
+                  { number: "80+", label: "Projects Completed" },
                   { number: "50+", label: "Happy Clients" },
                   { number: "150+", label: "Team Members" },
                   { number: "17+", label: "Countries Served" },
                 ].map((stat, index) => (
                   <div key={index} className="p-6">
                     <p className="text-4xl md:text-5xl font-bold mb-2 text-orange-500">{stat.number}</p>
-                    <p className="text-lg text-gray-600">{stat.label}</p>
+                    <p className="text-lg text-White-600">{stat.label}</p>
                   </div>
                 ))}
               </div>
