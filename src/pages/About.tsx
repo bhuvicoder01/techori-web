@@ -356,7 +356,7 @@ const About = () => {
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
-                  { number: "80+", label: "Projects Completed" },
+                  { number: "85+", label: "Projects Completed" },
                   { number: "50+", label: "Happy Clients" },
                   { number: "150+", label: "Team Members" },
                   { number: "17+", label: "Countries Served" },
