@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
-
+<script id="omnidimension-web-widget" async src="https://backend.omnidim.io/web_widget.js?secret_key=db99a2236ed32575b19a5550e24dbdc4" ></script>
 const About = () => {
   const [loaded, setLoaded] = useState(false);
 
