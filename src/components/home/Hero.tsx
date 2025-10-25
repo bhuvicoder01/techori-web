@@ -1,56 +1,111 @@
+'use client'
+
 import React from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Spotlight } from "@/components/ui/spotlight";
+import { SplineScene } from "@/components/ui/splite";
 import { Link } from "react-router-dom";
 import TechoriAnimation from "./Threejs";
 import NoticePopup from '@/components/home/NoticePopup';
-const Hero = () => {
-  return (
-    <div className="relative bg-techori-dark text-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <canvas id="particle-canvas" className="w-full h-full"></canvas>
-      </div>
-      <div className="container mx-auto px-4 py-28 relative z-10">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Innovative IT Solutions for{" "}
-              <span className="techori-gradient-text">Future-Ready</span>{" "}
-              Businesses
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl">
-              TECHORI delivers cutting-edge web & app development, public Wi-Fi solutions, and robotics
-              innovation to transform your digital presence.
-            </p>
-            <p className="text-xl mb-8 font-semibold text-gray-300">
-              INNOVATION IS OUR PASSION
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-gradient-to-r from-techori-orange to-techori-red hover:brightness-110 text-white px-8">
-                <Link to="/services">Our Services</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="text-black hover:bg-white hover:bg-techori-dark px-8">
-                <Link to="/contact">Get Started</Link>
-              </Button>
-            </div>
-          </div>
-          <div className="md:w-1/2 animate-slide-up">
-            <div className="relative">
-              <div className="w-full mr-20 h-80  bg-gradient-to-br from-techori-orange/20 to-techori-red/20 rounded-lg flex items-center justify-center relative">
-                <div className="flex items-center">
-                  <div className="w-24 h-24 md:h-32 mr-12 ml-12">
-                    <TechoriAnimation />
-                  </div>
 
-                </div>
-              </div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-techori-orange/30 rounded-full -mt-10 -mr-10 animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-techori-red/30 rounded-full -mb-10 -ml-10 animate-pulse"></div>
-            </div>
-          </div>
+export default function TechoriPage() {
+  return (
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-start overflow-hidden">
+      {/* Notice Popup */}
+      <NoticePopup />
+
+      {/* Hero Section */}
+      <section className="relative w-full h-[80vh] flex flex-col items-center justify-center bg-gradient-to-b from-black via-neutral-900 to-black text-center px-4">
+        <div className="absolute inset-0 opacity-10">
+          <TechoriAnimation />
         </div>
-      </div>
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500 drop-shadow-lg"
+        >
+          Welcome to Techori
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="mt-4 text-neutral-300 text-lg md:text-xl max-w-2xl leading-relaxed"
+        >
+          Empowering businesses through innovation, technology, and collaboration.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          className="mt-8 flex gap-4 justify-center"
+        >
+          <Link to="/explore">
+            <Button className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-pink-500/30 transition-all">
+              Explore Services
+            </Button>
+          </Link>
+          <Link to="/contact">
+            <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-500/10">
+              Contact Us
+            </Button>
+          </Link>
+        </motion.div>
+      </section>
+
+      {/* 3D Spline Section */}
+      <section className="w-full flex justify-center py-20 px-4">
+        <Card className="relative w-full max-w-6xl h-[550px] md:h-[600px] bg-black/95 overflow-hidden rounded-2xl border border-white/10 shadow-xl">
+          {/* Background glow */}
+          <Spotlight
+            className="-top-40 left-10 md:left-60 md:-top-20 opacity-80"
+            fill="white"
+          />
+
+          <div className="flex flex-col md:flex-row h-full">
+            {/* Left Text Section */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex-1 p-8 md:p-12 z-10 flex flex-col justify-center"
+            >
+              <h2 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-200 to-neutral-500 leading-tight">
+                Interactive 3D Experience
+              </h2>
+              <p className="mt-5 text-neutral-300 text-base md:text-lg max-w-lg leading-relaxed">
+                Elevate your interface with immersive 3D visuals powered by Spline. 
+                Create engaging and realistic experiences your users will love.
+              </p>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mt-8 w-fit bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-pink-500/30 transition-all"
+              >
+                Explore More
+              </motion.button>
+            </motion.div>
+
+            {/* Right 3D Scene */}
+            <motion.div
+              initial={{ opacity: 0, x: 80 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="flex-1 relative"
+            >
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="w-full h-full"
+              />
+            </motion.div>
+          </div>
+        </Card>
+      </section>
     </div>
   );
-};
-
-export default Hero;
+}
